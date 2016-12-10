@@ -1,4 +1,7 @@
-# ct-fletcher-eslint
+# eslint-config-ct-fletcher
+[**npm link**](https://www.npmjs.com/package/eslint-config-ct-fletcher)
+
+[**github link**](https://github.com/noahehall/eslint-config-ct-fletcher)
 
 ## parser
 ```
@@ -22,4 +25,23 @@
   "jsx-a11y",
   "eslint-plugin-flowtype",
   "import"
+```
+
+## Include it in your project
+**Install it as a dev dependency in your project**
+```
+$ npm install --save-dev eslint-config-ct-fletcher
+```
+
+**update your root/.eslintrc.js**
+
+```
+"use strict";
+
+module.exports = {
+  "extends": [
+    "eslint-config-ct-fletcher"
+  ]
+}
+
 ```

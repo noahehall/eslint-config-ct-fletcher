@@ -422,11 +422,7 @@ module.exports = {
     "sort-vars": 2,
     "space-after-keywords": 0,
     "space-before-blocks": 0,
-    "space-before-function-paren": ["error", {
-      "anonymous": "always",
-      "asyncArrow": "always",
-      "named": "always",
-    }],
+    "space-before-function-paren": ["error", "always"],
     "space-in-brackets": 0,
     "space-in-parens": 0,
     "space-infix-ops": 0,

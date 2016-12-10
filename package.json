@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ct-fletcher",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "If CT Fletcher was a javascript developer, this would be his eslint config",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,11 @@
     "eslint": ">= 3"
   },
   "dependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-module-resolver": "^2.4.0",
     "eslint": "^3.12.0",
     "eslint-config-defaults": "^9.0.0",
+    "eslint-import-resolver-babel-module": "^2.0.1",
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^3.0.1",
