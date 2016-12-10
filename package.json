@@ -1,0 +1,38 @@
+{
+  "name": "eslint-config-ct-fletcher",
+  "version": "1.0.0",
+  "description": "If CT Fletcher was a javascript developer, this would be his eslint config",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahehall/ct-fletcher-eslint.git"
+  },
+  "keywords": [
+    "ct-fletcher",
+    "ct",
+    "eslint",
+    "eslintconfig",
+    "fletcher",
+    "noahedwardhall"
+  ],
+  "author": "noahedwardhall @noahedwardhall <twitter.com/noahedwardhall>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahehall/ct-fletcher-eslint/issues"
+  },
+  "homepage": "https://github.com/noahehall/ct-fletcher-eslint#readme",
+  "peerDependencies": {
+    "eslint": ">= 3"
+  },
+  "dependencies": {
+    "eslint": "^3.12.0",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint-plugin-flowtype": "^2.29.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.1",
+    "eslint-plugin-react": "^6.8.0"
+  }
+}
