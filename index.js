@@ -1,27 +1,38 @@
 module.exports = {
-  "parser": "babel-eslint",
-  "globals": {},
-  "root": true,
+  "env": {
+    "amd": false,
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jasmine": false,
+    "jquery": false,
+    "mocha": true,
+    "node": true,
+    "phantomjs": false,
+    "prototypejs": false,
+    "shelljs": false
+  },
   "extends": [
-    "eslint:recommended",
     "defaults/rules/eslint/best-practices/eslint",
     "defaults/rules/eslint/errors/eslint",
     "defaults/rules/eslint/es6/eslint",
     "defaults/rules/eslint/node/eslint",
     "defaults/rules/eslint/strict/eslint",
     "defaults/rules/eslint/style/eslint",
-    "defaults/rules/eslint/variables/eslint"
+    "defaults/rules/eslint/variables/eslint",
+    "eslint:recommended"
   ],
+  "globals": {},
+  "parser": "babel-eslint",
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaVersion": 7,
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
       "binaryLiterals": false,
       "blockBindings": true,
       "defaultParams": true,
+      "experimentalObjectRestSpread": true,
       "forOf": true,
       "generators": true,
+      "jsx": true,
       "objectLiteralComputedProperties": true,
       "objectLiteralDuplicateProperties": true,
       "objectLiteralShorthandMethods": true,
@@ -30,23 +41,10 @@ module.exports = {
       "regexUFlag": false,
       "regexYFlag": false,
       "templateStrings": true,
-      "unicodeCodePointEscapes": true,
-      "jsx": true
-    }
-  },
-  "env": {
-    "browser": true,
-    "node": true,
-    "amd": false,
-    "mocha": true,
-    "jasmine": false,
-    "phantomjs": false,
-    "jquery": false,
-    "prototypejs": false,
-    "shelljs": false,
-    "commonjs": true,
-    "es6": true,
-    "node": true
+      "unicodeCodePointEscapes": true
+    },
+    "ecmaVersion": 7,
+    "sourceType": "module"
   },
   "plugins": [
     "react",
@@ -54,17 +52,18 @@ module.exports = {
     "eslint-plugin-flowtype",
     "import"
   ],
-  "settings": {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  },
+  "root": true,
   "rules": {
-    "import/no-unresolved": [2, {commonjs: true, amd: true}],
-    "import/named": 2,
-    "import/namespace": 2,
+    "import/no-unresolved": [
+      2, {
+        amd: true,
+        commonjs: true
+      }
+    ],
     "import/default": 2,
     "import/export": 2,
+    "import/named": 2,
+    "import/namespace": 2,
     "flowtype/boolean-style": [
       0,
       "boolean"
@@ -130,7 +129,7 @@ module.exports = {
     "callback-return": 0,
     "camelcase": 1,
     "class-methods-use-this": 0,
-    "comma-dangle": ["error", "only-multiline"],
+    "comma-dangle": [ "error", "only-multiline" ],
     "comma-spacing": 2,
     "comma-style": 2,
     "complexity": 0,
@@ -138,7 +137,7 @@ module.exports = {
     "consistent-return": 2,
     "consistent-this": 2,
     "constructor-super": 0,
-    "curly": ["error", "multi"],
+    "curly": [ "error", "multi" ],
     "default-case": 2,
     "dot-location": 0,
     "dot-notation": 2,
@@ -147,8 +146,8 @@ module.exports = {
     "func-call-spacing": 2,
     "func-names": 2,
     "func-style": 0,
-    "generator-star": 0,
     "generator-star-spacing": 0,
+    "generator-star": 0,
     "global-require": 0,
     "guard-for-in": 0,
     "handle-callback-err": 0,
@@ -156,9 +155,9 @@ module.exports = {
     "id-length": 0,
     "id-match": 0,
     "indent": [2, 2, {
+      MemberExpression: 1,
       outerIIFEBody: 1,
-      SwitchCase: 1,
-      MemberExpression: 1
+      SwitchCase: 1
     }],
     "init-declarations": 0,
     "jsx-a11y/anchor-has-content": 2,
@@ -188,9 +187,18 @@ module.exports = {
     "jsx-quotes": [2, "prefer-single"],
     "key-spacing": 0,
     "keyword-spacing": 0,
-    "line-comment-position": 2,
+    "line-comment-position": [
+      "error", {
+        "ignorePattern": "eslintignore",
+        "position": "above",
+      },
+    ],
     "linebreak-style": 2,
-    "lines-around-comment": [2, { "beforeBlockComment": false }],
+    "lines-around-comment": [
+      2, {
+        "beforeBlockComment": false
+      }
+    ],
     "lines-around-directive": 0,
     "max-depth": 0,
     "max-len": 0,
@@ -213,7 +221,11 @@ module.exports = {
     "no-catch-shadow": 2,
     "no-class-assign": 0,
     "no-cond-assign": 0,
-    "no-confusing-arrow": 2,
+    "no-confusing-arrow": [
+      "error", {
+        "allowParens": true
+      }
+    ],
     "no-console": 1,
     "no-const-assign": 2,
     "no-constant-condition": 2,
@@ -239,12 +251,7 @@ module.exports = {
     "no-extra-bind": 2,
     "no-extra-boolean-cast": 2,
     "no-extra-label": 2,
-    "no-extra-parens": [2,
-      "all", {
-        conditionalAssign: false,
-        returnAssign: false,
-        nestedBinaryExpressions: false,
-    }],
+    "no-extra-parens": 0,
     "no-extra-semi": 2,
     "no-fallthrough": 2,
     "no-floating-decimal": 2,
@@ -265,7 +272,7 @@ module.exports = {
     "no-lonely-if": 2,
     "no-loop-func": 0,
     "no-magic-numbers": 0,
-    "no-mixed-operators": 2,
+    "no-mixed-operators": 0,
     "no-mixed-requires": 2,
     "no-mixed-spaces-and-tabs": 2,
     "no-multi-spaces": 2,
@@ -348,11 +355,11 @@ module.exports = {
     "one-var-declaration-per-line": 0,
     "operator-assignment": 0,
     "operator-linebreak": 0,
-    "padded-blocks": ["error", "never"],
+    "padded-blocks": [ "error", "never" ],
     "prefer-arrow-callback": 2,
     "prefer-const": 2,
     "prefer-numeric-literals": 2,
-    "prefer-reflect": 2,
+    "prefer-reflect": 0,
     "prefer-rest-params": 2,
     "prefer-spread": 2,
     "prefer-template": 2,
@@ -394,7 +401,11 @@ module.exports = {
     "react/no-direct-mutation-state": 0,
     "react/no-find-dom-node": 2,
     "react/no-is-mounted": 2,
-    "react/no-multi-comp": 2,
+    "react/no-multi-comp": [
+      2, {
+        "ignoreStateless": true,
+      },
+    ],
     "react/no-render-return-value": 2,
     "react/no-set-state": 1,
     "react/no-string-refs": 0,
@@ -442,5 +453,10 @@ module.exports = {
     "wrap-regex": 0,
     "yield-star-spacing": 0,
     "yoda": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
   }
 }
