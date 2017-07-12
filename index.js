@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   "env": {
     "amd": false,
@@ -5,17 +7,22 @@ module.exports = {
     "commonjs": true,
     "es6": true,
     "jasmine": false,
+    "jest": false,
     "jquery": false,
     "mocha": true,
     "node": true,
     "phantomjs": false,
     "prototypejs": false,
-    "shelljs": false
+    "shared-node-browser": true,
+    "shelljs": false,
+    "serviceworker": true,
+    "webextensions": true,
+    "worker": true
   },
   "extends": [
     "defaults/rules/eslint/best-practices/eslint",
     "defaults/rules/eslint/errors/eslint",
-    "defaults/rules/eslint/es6/eslint",
+    //"defaults/rules/eslint/es6/eslint", // cannot be used with eslint4
     "defaults/rules/eslint/node/eslint",
     "defaults/rules/eslint/strict/eslint",
     "defaults/rules/eslint/style/eslint",
@@ -26,6 +33,7 @@ module.exports = {
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
+      "globalReturn": false,
       "binaryLiterals": false,
       "blockBindings": true,
       "defaultParams": true,
@@ -43,7 +51,7 @@ module.exports = {
       "templateStrings": true,
       "unicodeCodePointEscapes": true
     },
-    "ecmaVersion": 2018, # ECMAScript 8
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
@@ -160,31 +168,6 @@ module.exports = {
       SwitchCase: 1
     }],
     "init-declarations": 0,
-    "jsx-a11y/anchor-has-content": 2,
-    "jsx-a11y/aria-props": 2,
-    "jsx-a11y/aria-proptypes": 0,
-    "jsx-a11y/aria-role": 2,
-    "jsx-a11y/aria-unsupported-elements": 2,
-    "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/heading-has-content": 2,
-    "jsx-a11y/href-no-hash": 2,
-    "jsx-a11y/html-has-lang": 2,
-    "jsx-a11y/img-has-alt": 2,
-    "jsx-a11y/img-redundant-alt": 2,
-    "jsx-a11y/label-has-for": 2,
-    "jsx-a11y/lang": 2,
-    "jsx-a11y/mouse-events-have-key-events": 2,
-    "jsx-a11y/no-access-key": 2,
-    "jsx-a11y/no-marquee": 0,
-    "jsx-a11y/no-onchange": 2,
-    "jsx-a11y/no-static-element-interactions": 2,
-    "jsx-a11y/onclick-has-focus": 2,
-    "jsx-a11y/onclick-has-role": 2,
-    "jsx-a11y/role-has-required-aria-props": 2,
-    "jsx-a11y/role-supports-aria-props": 2,
-    "jsx-a11y/scope": 0,
-    "jsx-a11y/tabindex-no-positive": 0,
-    "jsx-quotes": [2, "prefer-single"],
     "key-spacing": 0,
     "keyword-spacing": 0,
     "line-comment-position": [
@@ -433,6 +416,31 @@ module.exports = {
     "sort-vars": 2,
     "space-after-keywords": 0,
     "space-before-blocks": 0,
+    "jsx-a11y/anchor-has-content": 2,
+    "jsx-a11y/aria-props": 2,
+    "jsx-a11y/aria-proptypes": 0,
+    "jsx-a11y/aria-role": 2,
+    "jsx-a11y/aria-unsupported-elements": 2,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/heading-has-content": 2,
+    "jsx-a11y/href-no-hash": 2,
+    "jsx-a11y/html-has-lang": 2,
+    "jsx-a11y/img-has-alt": 2,
+    "jsx-a11y/img-redundant-alt": 2,
+    "jsx-a11y/label-has-for": 2,
+    "jsx-a11y/lang": 2,
+    "jsx-a11y/mouse-events-have-key-events": 2,
+    "jsx-a11y/no-access-key": 2,
+    "jsx-a11y/no-marquee": 0,
+    "jsx-a11y/no-onchange": 2,
+    "jsx-a11y/no-static-element-interactions": 2,
+    "jsx-a11y/onclick-has-focus": 2,
+    "jsx-a11y/onclick-has-role": 2,
+    "jsx-a11y/role-has-required-aria-props": 2,
+    "jsx-a11y/role-supports-aria-props": 2,
+    "jsx-a11y/scope": 0,
+    "jsx-a11y/tabindex-no-positive": 0,
+    "jsx-quotes": [2, "prefer-single"],
     "space-before-function-paren": ["error", "always"],
     "space-in-brackets": 0,
     "space-in-parens": 0,
