@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ct-fletcher",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "If CT Fletcher was a javascript developer, this would be his eslint config",
   "main": "index.js",
   "scripts": {
