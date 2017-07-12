@@ -53,7 +53,7 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    "react",
+    "react"
     //"eslint-plugin-flowtype",
     //"import"
   ],
