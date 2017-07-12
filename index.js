@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = {
   "env": {
     "amd": false,
@@ -20,7 +22,7 @@ module.exports = {
   "extends": [
     "defaults/rules/eslint/best-practices/eslint",
     "defaults/rules/eslint/errors/eslint",
-    "defaults/rules/eslint/es6/eslint",
+    //"defaults/rules/eslint/es6/eslint", // cannot be used with eslint4
     "defaults/rules/eslint/node/eslint",
     "defaults/rules/eslint/strict/eslint",
     "defaults/rules/eslint/style/eslint",
@@ -53,9 +55,10 @@ module.exports = {
     "sourceType": "module"
   },
   "plugins": [
-    "react"
-    //"eslint-plugin-flowtype",
-    //"import"
+    "react",
+    "jsx-a11y",
+    "eslint-plugin-flowtype",
+    "import"
   ],
   "root": true,
   "rules": {
@@ -413,6 +416,31 @@ module.exports = {
     "sort-vars": 2,
     "space-after-keywords": 0,
     "space-before-blocks": 0,
+    "jsx-a11y/anchor-has-content": 2,
+    "jsx-a11y/aria-props": 2,
+    "jsx-a11y/aria-proptypes": 0,
+    "jsx-a11y/aria-role": 2,
+    "jsx-a11y/aria-unsupported-elements": 2,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/heading-has-content": 2,
+    "jsx-a11y/href-no-hash": 2,
+    "jsx-a11y/html-has-lang": 2,
+    "jsx-a11y/img-has-alt": 2,
+    "jsx-a11y/img-redundant-alt": 2,
+    "jsx-a11y/label-has-for": 2,
+    "jsx-a11y/lang": 2,
+    "jsx-a11y/mouse-events-have-key-events": 2,
+    "jsx-a11y/no-access-key": 2,
+    "jsx-a11y/no-marquee": 0,
+    "jsx-a11y/no-onchange": 2,
+    "jsx-a11y/no-static-element-interactions": 2,
+    "jsx-a11y/onclick-has-focus": 2,
+    "jsx-a11y/onclick-has-role": 2,
+    "jsx-a11y/role-has-required-aria-props": 2,
+    "jsx-a11y/role-supports-aria-props": 2,
+    "jsx-a11y/scope": 0,
+    "jsx-a11y/tabindex-no-positive": 0,
+    "jsx-quotes": [2, "prefer-single"],
     "space-before-function-paren": ["error", "always"],
     "space-in-brackets": 0,
     "space-in-parens": 0,
