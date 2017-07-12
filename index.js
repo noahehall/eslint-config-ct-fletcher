@@ -17,6 +17,16 @@ module.exports = {
     "webextensions": true,
     "worker": true
   },
+  "extends": [
+    "defaults/rules/eslint/best-practices/eslint",
+    "defaults/rules/eslint/errors/eslint",
+    "defaults/rules/eslint/es6/eslint",
+    "defaults/rules/eslint/node/eslint",
+    "defaults/rules/eslint/strict/eslint",
+    "defaults/rules/eslint/style/eslint",
+    "defaults/rules/eslint/variables/eslint",
+    "eslint:recommended"
+  ],
   "globals": {},
   "parser": "babel-eslint",
   "parserOptions": {
@@ -39,7 +49,7 @@ module.exports = {
       "templateStrings": true,
       "unicodeCodePointEscapes": true
     },
-    "ecmaVersion": 2018, # ECMAScript 8
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
