@@ -54,8 +54,8 @@ module.exports = {
   },
   "plugins": [
     "react",
-    "eslint-plugin-flowtype",
-    "import"
+    //"eslint-plugin-flowtype",
+    //"import"
   ],
   "root": true,
   "rules": {
