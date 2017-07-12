@@ -56,7 +56,7 @@ module.exports = {
   },
   "plugins": [
     "react",
-    //"jsx-a11y", cannot be used with eslint 4
+    "jsx-a11y",
     "eslint-plugin-flowtype",
     "import"
   ],
