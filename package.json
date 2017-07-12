@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ct-fletcher",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "If CT Fletcher was a javascript developer, this would be his eslint config",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/noahehall/ct-fletcher-eslint.git"
+    "url": "git+https://github.com/noahehall/eslint-config-ct-fletcher.git"
   },
   "keywords": [
     "ct-fletcher",
@@ -21,21 +21,21 @@
   "author": "noahedwardhall @noahedwardhall <twitter.com/noahedwardhall>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/noahehall/ct-fletcher-eslint/issues"
+    "url": "https://github.com/noahehall/eslint-config-ct-fletcher/issues"
   },
-  "homepage": "https://github.com/noahehall/ct-fletcher-eslint#readme",
+  "homepage": "https://github.com/noahehall/eslint-config-ct-fletcher#readme",
   "peerDependencies": {
     "eslint": ">= 3"
   },
   "dependencies": {
     "babel-eslint": "^7.1.1",
     "babel-plugin-module-resolver": "^2.4.0",
-    "eslint": "^3.12.0",
+    "eslint": "^4.2.0",
     "eslint-config-defaults": "^9.0.0",
-    "eslint-import-resolver-babel-module": "^2.0.1",
+    "eslint-import-resolver-babel-module": "^3.0.0",
     "eslint-plugin-flowtype": "^2.29.1",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^3.0.1",
-    "eslint-plugin-react": "^6.8.0"
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.1.0"
   }
 }

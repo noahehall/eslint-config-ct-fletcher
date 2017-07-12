@@ -43,7 +43,7 @@ module.exports = {
       "templateStrings": true,
       "unicodeCodePointEscapes": true
     },
-    "ecmaVersion": 7,
+    "ecmaVersion": 2018, # ECMAScript 8
     "sourceType": "module"
   },
   "plugins": [
