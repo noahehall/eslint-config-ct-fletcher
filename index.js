@@ -15,7 +15,7 @@ module.exports = {
     "shelljs": false,
     "serviceworker": true,
     "webextensions": true,
-    "worker": true,
+    "worker": true
   },
   "extends": [
     #"defaults/rules/eslint/best-practices/eslint",
