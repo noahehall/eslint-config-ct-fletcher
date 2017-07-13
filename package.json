@@ -25,9 +25,6 @@
   },
   "homepage": "https://github.com/noahehall/eslint-config-ct-fletcher#readme",
   "peerDependencies": {
-    "eslint": ">= 3"
-  },
-  "peerDependencies": {
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
     "eslint-plugin-import": "2.x",
